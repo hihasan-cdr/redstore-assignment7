@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Title-->
+    <title>RedStore|| E-commerce</title>
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/img/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css" />
+    <!--Bootstrap CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!--Header Start-->
+    <header class="header">
+        <!-- Menu Start-->
+        <div class="container">
+            <div class="row">
+                <!--Logo-->
+                <div class="col-md-3">
+                    <h2 class="logo"><span class="color">Red</span>Store<span class="color">.</span></h2>
+                </div>
+                <!--Search Button Start-->
+                <div class="col-md-6 text-center">
+                    <div class="from-input mt-3">
+                        <div class="input-group">
+                            <input type="text" id="form-style" class="form-control" placeholder="Search Here.."
+                                aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button id="btn-info" class="btn btn-info" type="button" id="button-addon2">Search</button>
+                        </div>
+                    </div>
+                </div>
+                <!--Search Button End-->
+                <!--Icon-->
+                <div class="col-md-3">
+                    <div class="icon-list text-white text-center">
+                        <i class="fa fa-heart-o"></i>
+                        <p>Your wishlist</p>
+                    </div>
+                    <div class="icon-list1 text-white text-center">
+                        <i class="fa fa-shopping-cart"></i>
+                        <p>Your card</p>
+                    </div>
+                </div>
+                <!--Icon End-->
+            </div>
+        </div>
+        <!--Menu End-->
+    </header>
+    <!--Header End-->
+
+
+
+    <!--Product page Start-->
+    <main class="main">
+        <div class="row">
+            <!--Modal-->
+            <div class="w-50 mx-auto m-5 text-center">
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header" id="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" id="modal-body"></div>
+                            <div class="modal-footer">
+                                <button id="addToCart-btn" type="button" class="btn btn-primary"
+                                    data-bs-dismiss="modal">
+                                    Close
+                                </button>
+                                <button id="modal-btn" type="button" class="btn btn-primary">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Modal End-->
+
+            <!-- All Product-->
+            <div class="col-md-9 col-lg-9 col-sm-7">
+                <div id="all-products" class="">
+
+                </div>
+            </div>
+            <!-- All Product End-->
+
+            <!-------------- Cart Section Start  ---------------->
+            <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
+                <div class="cart" id="my-cart">
+                    <table class="table text-white">
+                        <!--Cart option-->
+                        <thead>
+                            <h2 class="text-white">My-Cart</h2>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <!--Cart Top-->
+                        <!--Cart Body-->
+                        <tbody>
+                            <tr>
+                                <th>Total Added-Products:</th>
+                                <td><span id="total-Products">0</span></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Price:</th>
+                                <td>$ <span id="price">0</span></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Delivery-Charge:</th>
+                                <td>$ <span id="delivery-charge">20</span></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Total-Tax:</th>
+                                <td>$ <span id="total-tax">0</span></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Total</th>
+                                <td colspan="2">$ <span id="total">0</span></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <!--Cart Body End-->
+                    </table>
+                    <!--Cart Button-->
+                    <div class="parces text-center">
+                        <button id="btn-dark" class="btn btn-dark text-center">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <!--Cart End-->
+        </div>
+    </main>
+    <!--Product page End-->
+    <footer>
+        <!--Footer section-->
+        <footer id="footer" class="bg-dark text-white mt-5">
+            <div class="container mt-5 pb-5">
+                <div class="row d-flex justify-content-between align-items-center">
+                    <div class="col-lg-5 mt-5">
+                        <h6>🏠 Building No-34, Road No-06 Jamalpur Sadar, Jamalpur.</h6>
+                        <h6> 📧 Official: redstore@info.com</h6>
+                        <h6>📱 Helpline : +835464267 (Avail: 09:00am to 7:00pm)</h6>
+                    </div>
+                    <div class="col-lg-3 mt-5 footer-text">
+                        <h6>About Us</h6>
+                         <h6>Contact Us<h6>
+                        <h6>Privacy & Policy</h6>
+                        <h6>Terms & Condition</h6>
+                    </div>
+                    <div class="col-lg-4 mt-5">
+                        <div>
+                            <img class="img-fluid rounded" src="/img/payment icon.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center pt-5">Copyright &copy; 2021 || RedStore</p>
+            </div>
+        </footer>
+        <!-- Footer Section End -->
+    </footer>
+
+
+    <!--Bootstrap CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Font Awesome CDN-->
+    <script src="https://kit.fontawesome.com/362a8862fb.js"></script>
+    <!--app.js-->
+    <script src="/app.js"></script>
+</body>
+
+</html>
